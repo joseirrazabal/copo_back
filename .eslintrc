@@ -1,0 +1,43 @@
+{
+	"parser": "babel-eslint",
+
+	"env": {
+		"browser": false,
+		"es6": true,
+		"node": true,
+		"jest": true
+	},
+
+	"extends": ["prettier", "prettier/flowtype", "prettier/standard"],
+
+	"plugins": ["prettier", "import"],
+
+	"parserOptions": {
+		"ecmaVersion": 6,
+		"sourceType": "module",
+		"ecmaFeatures": {
+			"defaultParams": true
+		}
+	},
+
+	"rules": {
+		"prettier/prettier": "warn",
+		"prefer-arrow/prefer-arrow-functions": [
+			"warn",
+			{
+				"disallowPrototype": true,
+				"singleReturnOnly": false,
+				"classPropertiesAllowed": false
+			}
+		],
+		"import/no-absolute-path": "off",
+		"import/export": "error",
+		"import/first": "error",
+		"import/exports-last": "error",
+		"import/newline-after-import": "error"
+	},
+
+	"settings": {
+		"propWrapperFunctions": ["forbidExtraProps", "exact", "Object.freeze"]
+	}
+}
