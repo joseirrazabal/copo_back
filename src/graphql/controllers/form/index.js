@@ -3,7 +3,7 @@ import config from '../../../config'
 
 const schemas = gql`
 	extend type Mutation {
-		saveForm(username: String, email: String, description: String, form: Data): Resp
+		saveForm(nombre: String, email: String, descripcion: String, telefono: String, form: Data): Resp
 	}
 
   enum Tipo {
@@ -14,7 +14,7 @@ const schemas = gql`
   } 
 
   enum Categorias {
-    ECOMERCE
+    ECOMMERCE
     LANDING
     SIMPLE
     ADMINISTRABLE

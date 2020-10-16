@@ -13,11 +13,10 @@ class Form extends DataSource {
 	async save(args, refresh = false) {
 		try {
       const result = await this.store.collection('formulario').insertOne( args )
-      console.log("result", get(result, 'result'))
 
       return  { description: "bien"}
 		} catch (e) {
-			console.log('fares', e)
+			console.log('error: ', e)
 		}
 	}
 
